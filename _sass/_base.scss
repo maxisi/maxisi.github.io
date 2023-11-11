@@ -665,6 +665,21 @@ footer.sticky-bottom {
         width: 100%;
         min-width: 80px;
         max-width: 200px;
+
+        abbr {
+          display: inline-block;
+          background-color: var(--global-theme-color);
+          padding-left: 1rem;
+          padding-right: 1rem;
+
+          a {
+            color: white;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
       }
 
       .abbr {
@@ -855,6 +870,17 @@ html.transition *:after {
 
       &:hover {
         color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .post-content {
+    blockquote {
+      border-left: 5px solid var(--global-theme-color);
+      padding: 8px;
+
+      p {
+        margin-bottom: 0;
       }
     }
   }
