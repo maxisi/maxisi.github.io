@@ -28,7 +28,16 @@ I have been a member of the LIGO Scientific Collaboration since I joined as an u
 
 My current _research interests_ include: measurements of black-hole spins, black-hole spectroscopy, mass-function cosmology, dark matter signatures with gravitational waves, using gravitational waves to constrain the fundamental symmetries of spacetime (e.g., parity and Lorentz invariance).
 
+h-index <big><b>[86](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi&ui-citation-summary=true)</b> / <b>[24](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi%20-%20abbott&ui-citation-summary=true)</b></big>
+&nbsp;<big>\|</big>&nbsp;
+publications <big><b>193</b> / <b>50</b></big>
+&nbsp;<big>\|</big>&nbsp;
+citations <big><b>74k</b> / <b>2.1k</b></big>
+
+<i><small>first number includes LIGO collaboration papers; second number excludes them</small></i>
+
 _Photo credit: [La Diaria](https://ladiaria.com.uy/educacion/articulo/2017/10/investigadores-uruguayos-comentan-los-nobel-de-la-ciencia/), Juan Manuel Ramos_
+
 
 <!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 % 
