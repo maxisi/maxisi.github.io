@@ -28,11 +28,11 @@ I have been a member of the LIGO Scientific Collaboration since I joined as an u
 
 My current _research interests_ include: measurements of black-hole spins, black-hole spectroscopy, mass-function cosmology, dark matter signatures with gravitational waves, using gravitational waves to constrain the fundamental symmetries of spacetime (e.g., parity and Lorentz invariance).
 
-h-index <big><b>[87](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi&ui-citation-summary=true)</b> / <b>[25](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi%20-%20abbott&ui-citation-summary=true)</b></big>
+h-index <big><b>[88](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi&ui-citation-summary=true)</b> / <b>[25](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi%20-%20abbott&ui-citation-summary=true)</b></big>
 &nbsp;<big>\|</big>&nbsp;
-publications <big><b>193</b> / <b>50</b></big>
+publications <big><b>194</b> / <b>51</b></big>
 &nbsp;<big>\|</big>&nbsp;
-citations <big><b>75k</b> / <b>2.2k</b></big>
+citations <big><b>76k</b> / <b>2.3k</b></big>
 
 <i><small>first number includes LIGO collaboration papers; second number excludes them</small></i>
 
