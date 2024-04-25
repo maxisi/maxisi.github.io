@@ -19,7 +19,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a gravitational-wave astrophysicist using observations to probe the physics and astrophysics of _gravity_, _black holes_, and _neutron stars_. I create new ways to exploit [LIGO](https://ligo.caltech.edu) and [Virgo](https://www.virgo-gw.eu) measurements to answer questions in (astro)phyisics and cosmology, while paving the way for future instruments like [LISA](https://www.lisamission.org).
+I am a gravitational-wave astrophysicist using observations to probe the physics and astrophysics of _gravity_, _black holes_, and _neutron stars_. I create new ways to exploit [LIGO](https://ligo.caltech.edu) and [Virgo](https://www.virgo-gw.eu) measurements to answer questions in (astro)physics and cosmology, while paving the way for future instruments like [LISA](https://www.lisamission.org).
 When not working with data, I think about open questions regarding the nature of black hole mergers and their observational implications.
 
 Before joining the <a href='https://www.flatironinstitute.org'>Flatiron Institute</a> as a _Research Fellow_, I was a _NASA Einstein Fellow_ at [MIT](https://web.mit.edu).
