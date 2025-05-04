@@ -9,11 +9,11 @@ nav_order: 1
 ---
 <!-- _pages/publications.md -->
 h-index
-<big><b>[95](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi&ui-citation-summary=true)</b>
+<big><b>[97](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi&ui-citation-summary=true)</b>
 /
-<b>[27](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi%20-%20abbott&ui-citation-summary=true)</b></big>
-&nbsp;<big>\|</big>&nbsp; publications <big><b>206</b> / <b>58</b></big>
-&nbsp;<big>\|</big>&nbsp; citations <big><b>89k</b> / <b>3k</b></big>
+<b>[29](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi%20-%20abbott&ui-citation-summary=true)</b></big>
+&nbsp;<big>\|</big>&nbsp; publications <big><b>207</b> / <b>58</b></big>
+&nbsp;<big>\|</big>&nbsp; citations <big><b>94k</b> / <b>3k</b></big>
 
 <i><small>first number includes LIGO collaboration papers; second number excludes them</small></i>
 
