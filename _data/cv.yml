@@ -9,9 +9,17 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Assistant Professor
+      institution: Department of Astronomy, Columbia University
+      year: 2025-
+      description:
+    - title: Associate Research Scientist
+      institution: Center for Computational Astrophysics, Flatiron Institute
+      year: 2025-
+      description:
     - title: Flatiron Research Fellow
       institution: Center for Computational Astrophysics, Flatiron Institute
-      year: 2021-
+      year: 2021 - 2025
       description:
     - title: NASA Einstein Fellow
       institution: Massachusetts Institute of Technology
@@ -50,22 +58,22 @@
 #       items: 
 #         - Max Planck Medal
 
-- title: Technical skills
-  type: nested_list
-  contents:
-    - title: Data analysis
-      items: 
-        - Probability theory
-        - Statistical inference (Bayesian and frequentist)
-        - Digital signal processing
-        - Machine learning (cursory)
-    - title: Computing
-      items:
-        - High throughput computing
-        - Python, C/C++, Julia, Mathematica, Matlab
-    - title: Certifications
-      items:
-        - NVIDIA Deep Learning Institute <a href="https://courses.nvidia.com/certificates/95dade1f36ee4eaf92aa588d22b0351a/">Fundamentals of Deep Learning</a>
+# - title: Technical skills
+#   type: nested_list
+#   contents:
+#     - title: Data analysis
+#       items: 
+#         - Probability theory
+#         - Statistical inference
+#         - Digital signal processing
+#         - Machine learning
+#     - title: Computing
+#       items:
+#         - High throughput computing
+#         - Python, C/C++, Julia, Mathematica, Matlab
+#     - title: Certifications
+#       items:
+#         - NVIDIA Deep Learning Institute <a href="https://courses.nvidia.com/certificates/95dade1f36ee4eaf92aa588d22b0351a/">Fundamentals of Deep Learning</a>
 
 # - title: Other Interests
 #   type: list
