@@ -22,9 +22,9 @@ social: true  # includes social icons at the bottom of the page
 I am a gravitational-wave astrophysicist using observations to probe the physics and astrophysics of _gravity_, _black holes_, and _neutron stars_. I create new ways to exploit [LIGO](https://ligo.caltech.edu) and [Virgo](https://www.virgo-gw.eu) measurements to answer questions in astrophysics and cosmology, while paving the way for future instruments like [LISA](https://www.lisamission.org).
 When not working with data, I think about open questions regarding the nature of black hole mergers and their observational implications.
 
-Before joining the <a href='https://www.flatironinstitute.org'>Flatiron Institute</a> as a _Research Fellow_, I was a _NASA Einstein Fellow_ at [MIT](https://web.mit.edu).
+Before joining <a href='https://www.astro.columbia.edu/content/maximiliano-isi'>Columbia University</a> and the <a href='https://www.simonsfoundation.org/people/max-isi/'>Flatiron Institute</a>, I was a _NASA Einstein Fellow_ at [MIT](https://web.mit.edu).
 I obtained my PhD in Physics from [Caltech](https://caltech.edu) in 2018, where I was part of the LIGO Laboratory.
-I have been a member of the LIGO Scientific Collaboration since I joined as an undergraduate student in 2012.
+I have been a member of the LIGO Scientific Collaboration since 2012.
 
 My current _research interests_ include: measurements of black-hole spins, black-hole spectroscopy, mass-function cosmology, dark matter signatures with gravitational waves, and machine learning methods for gravitational-wave astronomy.
 
