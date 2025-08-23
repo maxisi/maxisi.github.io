@@ -31,7 +31,7 @@ My current _research interests_ include: measurements of black-hole spins, black
 h-index
 <big><b>[101](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi&ui-citation-summary=true)</b>
 /
-<b>[31](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi%20-%20abbott&ui-citation-summary=true)</b></big>
+<b>[31](https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=author%3Aisi%20-%20abbott%20-%20abac&ui-citation-summary=true)</b></big>
 &nbsp;<big>\|</big>&nbsp; publications <big><b>212</b> / <b>61</b></big>
 &nbsp;<big>\|</big>&nbsp; citations <big><b>99k</b> / <b>3.7k</b></big>
 
