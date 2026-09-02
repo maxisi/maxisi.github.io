@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /repositories/
-title: repositories
+title: software
 description: here is some of my open-access software.
 nav: true
 nav_order: 3
