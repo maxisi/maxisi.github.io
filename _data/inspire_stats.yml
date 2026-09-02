@@ -4,16 +4,16 @@ updated: 2026-09-01
 all:
   query: "a Maximiliano.Isi.1"
   url: "https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a+Maximiliano.Isi.1&ui-citation-summary=true"
-  publications: 262
-  citeable: 259
+  publications: 259
+  hits: 262
   citations: 118977
   citations_short: "119k"
   hindex: 111
 noncollab:
   query: "a Maximiliano.Isi.1 - abbott - abac"
   url: "https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a+Maximiliano.Isi.1+-+abbott+-+abac&ui-citation-summary=true"
-  publications: 70
-  citeable: 68
+  publications: 68
+  hits: 70
   citations: 5096
   citations_short: "5.1k"
   hindex: 37

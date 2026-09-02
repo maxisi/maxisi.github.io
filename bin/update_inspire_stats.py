@@ -38,16 +38,19 @@ USER_AGENT = "maxisi.github.io stats updater (https://github.com/maxisi/maxisi.g
 
 
 def fetch(query):
-    """Return (publications, citeable, citations, h-index) for an INSPIRE query."""
+    """Return publication, search-hit, citation and h-index counts for an INSPIRE query."""
     params = urllib.parse.urlencode({"q": query, "facet_name": "citation-summary"})
     request = urllib.request.Request(f"{API}?{params}", headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(request, timeout=60) as response:
         data = json.load(response)
     summary = data["aggregations"]["citation_summary"]
     citeable = summary["citations"]["buckets"]["all"]
+    # "publications" is the number of citeable papers, i.e. the "Citeable papers"
+    # row of INSPIRE's citation summary (theses and unrefereed talks are not
+    # citeable); "hits" is the raw number of search results, kept for reference.
     return {
-        "publications": int(data["hits"]["total"]["value"]),
-        "citeable": int(citeable["doc_count"]),
+        "publications": int(citeable["doc_count"]),
+        "hits": int(data["hits"]["total"]["value"]),
         "citations": int(citeable["citations_count"]["value"]),
         "hindex": int(summary["h-index"]["value"]["all"]),
     }
@@ -82,7 +85,7 @@ def render(stats, updated):
             f"  query: {json.dumps(query)}",
             f"  url: {json.dumps(web_url(query))}",
             f"  publications: {s['publications']}",
-            f"  citeable: {s['citeable']}",
+            f"  hits: {s['hits']}",
             f"  citations: {s['citations']}",
             f"  citations_short: {json.dumps(short(s['citations']))}",
             f"  hindex: {s['hindex']}",
