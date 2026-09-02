@@ -461,6 +461,88 @@ footer.sticky-bottom {
 
 // Repositories
 
+.repo {
+  display: flex;
+  width: 100%;
+
+  // The wrapper, the link and the card all stretch, so that cards sharing a
+  // row end up the same height whatever the length of their descriptions.
+  a {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+
+    &:hover .repo-card-title {
+      color: var(--global-theme-color);
+    }
+  }
+
+  .repo-card {
+    width: 100%;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+
+    .card-body {
+      padding: 1rem 1.25rem;
+      text-align: left;
+    }
+  }
+
+  .repo-card-title {
+    color: var(--global-text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+
+    i {
+      color: var(--global-text-color-muted);
+      margin-right: 0.4rem;
+    }
+  }
+
+  .repo-card-owner {
+    font-weight: 400;
+    color: var(--global-text-color-muted);
+  }
+
+  .repo-card-archived {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 2em;
+    color: var(--global-text-color-muted);
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    padding: 0.1em 0.6em;
+    vertical-align: middle;
+  }
+
+  .repo-card-description {
+    color: var(--global-text-color-muted);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+  }
+
+  .repo-card-meta {
+    color: var(--global-text-color-muted);
+    font-size: 0.8rem;
+
+    span {
+      margin-right: 1rem;
+      white-space: nowrap;
+    }
+  }
+
+  .repo-card-dot {
+    border-radius: 50%;
+    display: inline-block;
+    height: 0.75em;
+    margin-right: 0.4em;
+    vertical-align: -0.05em;
+    width: 0.75em;
+  }
+}
+
 @media (min-width: 768px) {
   .repo {
     max-width: 50%;

@@ -7,7 +7,9 @@ name: update publications
 #     refreshes publication details of existing ones, and updates the year list
 #     in _pages/publications.md;
 #   * bin/update_previews.py makes a thumbnail from the first figure of each
-#     new paper's arXiv source (only for entries with no "preview" field).
+#     new paper's arXiv source (only for entries with no "preview" field);
+#   * bin/update_repos.py refreshes the GitHub repository cards on the software
+#     page in _data/github_repos.yml.
 # Changes are committed and the site redeployed.  Commits made with the default
 # GITHUB_TOKEN do not trigger "push" workflows, so deploy is dispatched explicitly.
 
@@ -43,11 +45,16 @@ jobs:
           sudo apt-get install -y -qq ghostscript imagemagick
           python3 bin/update_previews.py
 
+      - name: Refresh GitHub repository cards 💾
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 bin/update_repos.py
+
       - name: Commit and redeploy if changed 🚀
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git add -- _data/inspire_stats.yml _bibliography/papers.bib _pages/publications.md assets/img/publication_preview
+          git add -- _data/inspire_stats.yml _data/github_repos.yml _bibliography/papers.bib _pages/publications.md assets/img/publication_preview
           if git diff --cached --quiet; then
             echo "Nothing changed; nothing to do."
             exit 0

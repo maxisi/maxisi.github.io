@@ -1,3 +1,8 @@
+# Which GitHub repositories the software page shows.  Their details (description,
+# language, stars, forks) are fetched into _data/github_repos.yml; after adding a
+# repository here, run  python3 bin/update_repos.py  to pick them up, or wait for
+# the weekly update-publications workflow to do it.
+
 #github_users:
 #  - maxisi
 
