@@ -3,8 +3,8 @@
 <!-- _layouts/bib.html -->
       <div class="row">
         {%- if site.enable_publication_thumbnails -%}
-        <div class="col-sm-2 {% if entry.preview %}preview{% else %}abbr{% endif %}">
-        {%- if entry.preview -%}
+        <div class="col-sm-2 {% if entry.preview and entry.preview != "none" %}preview{% else %}abbr{% endif %}">
+        {%- if entry.preview and entry.preview != "none" -%}
           {%- if entry.abbr -%}
             {%- if site.data.venues[entry.abbr] -%}
               {%- assign venue_style = nil -%}

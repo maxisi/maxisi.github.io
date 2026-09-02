@@ -1,0 +1,59 @@
+name: update publications
+
+# Keep the publications page in sync with INSPIRE-HEP:
+#   * bin/update_inspire_stats.py refreshes the h-index / publication / citation
+#     numbers in _data/inspire_stats.yml;
+#   * bin/update_publications.py adds new papers to _bibliography/papers.bib,
+#     refreshes publication details of existing ones, and updates the year list
+#     in _pages/publications.md;
+#   * bin/update_previews.py makes a thumbnail from the first figure of each
+#     new paper's arXiv source (only for entries with no "preview" field).
+# Changes are committed and the site redeployed.  Commits made with the default
+# GITHUB_TOKEN do not trigger "push" workflows, so deploy is dispatched explicitly.
+
+on:
+  schedule:
+    - cron: '17 6 * * 1'  # weekly, Mondays 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: update-publications
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Fetch stats from INSPIRE 📈
+        run: python3 bin/update_inspire_stats.py
+
+      - name: Sync bibliography with INSPIRE 📚
+        run: python3 bin/update_publications.py
+
+      - name: Make thumbnails from arXiv figures 🖼️
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ghostscript imagemagick
+          python3 bin/update_previews.py
+
+      - name: Commit and redeploy if changed 🚀
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add -- _data/inspire_stats.yml _bibliography/papers.bib _pages/publications.md assets/img/publication_preview
+          if git diff --cached --quiet; then
+            echo "Nothing changed; nothing to do."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update publications from INSPIRE"
+          git push
+          gh workflow run deploy.yml --ref "$GITHUB_REF_NAME"
