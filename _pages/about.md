@@ -23,7 +23,7 @@ I am a gravitational-wave astrophysicist using observations to probe the physics
 When not working with data, I think about open questions regarding the nature of black hole mergers and their observational implications.
 
 Before joining <a href='https://www.astro.columbia.edu/content/maximiliano-isi'>Columbia University</a> and the <a href='https://www.simonsfoundation.org/people/max-isi/'>Flatiron Institute</a>, I was a _NASA Einstein Fellow_ at [MIT](https://web.mit.edu).
-I obtained my PhD in Physics from [Caltech](https://caltech.edu) in 2018, where I was part of the LIGO Laboratory.
+I obtained my PhD in Physics from [Caltech](https://caltech.edu) in 2019, where I was part of the LIGO Laboratory.
 I have been a member of the LIGO Scientific Collaboration since 2012.
 
 My current _research interests_ include: measurements of black-hole spins, black-hole spectroscopy, mass-function cosmology, dark matter signatures with gravitational waves, and machine learning methods for gravitational-wave astronomy.
