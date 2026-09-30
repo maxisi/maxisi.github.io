@@ -217,8 +217,13 @@ ul.timeline li::before {
  * CV: download button, dated lists, grouped cards, metrics
  *****************************/
 
+.cv-download-lead {
+  font-weight: 500;
+  margin: 0.25rem 0 0.5rem;
+}
+
 .cv-download {
-  margin: 0.5rem 0 1rem;
+  margin: 0 0 1rem;
 
   .btn {
     margin-right: 0.4rem;

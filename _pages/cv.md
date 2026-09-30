@@ -2,7 +2,7 @@
 layout: cv
 permalink: /cv/
 title: cv
-description: curriculum vitae, mirroring the PDF version. Publication metrics, the current group and the teaching record are drawn from the same data as the rest of the site.
+description: a summary&#58; employment, education, publication rankings and advising. The full curriculum vitae, including teaching, honors, invited talks and outreach, is available as a PDF below.
 nav: true
 nav_order: 7
 cv_pdf: maxisi_cv.pdf
