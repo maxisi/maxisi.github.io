@@ -10,6 +10,7 @@ layout: default
       {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
       {% if page.cv_pdf %}
       {%- assign pdf_path = page.cv_pdf | prepend: '/assets/pdf/' -%}
+      <p class="cv-download-lead">The full CV is available as a PDF:</p>
       <p class="cv-download">
         <a class="btn btn-primary" href="{{ pdf_path | relative_url }}" download><i class="fas fa-file-pdf"></i>&nbsp; Download PDF</a>
         <a class="btn btn-outline" href="{{ pdf_path | relative_url }}" target="_blank" rel="noopener noreferrer">Open in browser</a>
