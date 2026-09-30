@@ -1,0 +1,49 @@
+# Teaching record shown on /teaching/ (source: the Teaching section of the CV).
+
+courses:
+  - code: ASTR 4260
+    title: Modeling the Universe
+    institution: Columbia University
+    role: Instructor
+    years: 2025–present
+  - code: ASTR 6014
+    title: Cosmology, Black Holes, and Gravity
+    institution: Columbia University
+    role: Instructor
+    years: 2025–present
+
+guest_lectures:
+  - institution: Massachusetts Institute of Technology
+    year: 2019
+    courses:
+      - Relativity (8.033)
+      - Introduction to Special Relativity (8.20)
+      - Selected Topics in Graduate Physics (8.398)
+
+schools:
+  - name: School on Astroparticle and Multi-Messenger Astrophysics
+    institution: ICTP-SAIFR, São Paulo, Brazil
+    year: 2026
+    description: Course on gravitational-wave astronomy.
+  - name: Summer school for South American teachers
+    institution: ICTP-SAIFR, São Paulo, Brazil
+    year: 2022
+    description: Invited lecture.
+  - name: Course on detecting and analyzing gravitational waves
+    institution: International Institute of Physics, Natal, Brazil
+    year: 2019
+    description: Structured and delivered a one-week course.
+  - name: International School on Astroparticle Physics
+    institution: Pierre Auger Observatory, Argentina
+    year: 2019
+    description: Invited lecturer on gravitational-wave detection and characterization.
+  - name: Caltech Gravitational-Wave Astronomy School (CGWAS 2015)
+    institution: California Institute of Technology
+    year: 2015
+    description: Teaching assistant for the course on gravitational waves from compact binaries.
+
+mentoring: >
+  Students at every level take part in the group's research, from undergraduates
+  working on their first data-analysis project to PhD students and postdocs leading
+  publications. See the [group page](/group/) for who is currently in the group and
+  how to join.

@@ -1,0 +1,50 @@
+---
+layout: default
+title: notes
+permalink: /notes/
+nav: true
+nav_order: 5
+---
+<!-- notes/index.html: a plain chronological list of notes, grouped by year -->
+<div class="post notes-index">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ site.blog_name }}</h1>
+    <p class="post-description">{{ site.blog_description }}</p>
+  </header>
+
+  {% if site.display_tags %}
+  <p class="notes-tags">
+    {% for tag in site.display_tags -%}
+    <a class="chip" href="{{ tag | slugify | prepend: '/notes/tag/' | relative_url }}"><i class="fas fa-hashtag fa-xs"></i> {{ tag }}</a>
+    {% endfor %}
+  </p>
+  {% endif %}
+
+  {%- assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+  {% for year in posts_by_year %}
+  <section class="notes-year">
+    <h2 class="notes-year-title"><a href="{{ year.name | prepend: '/notes/' | relative_url }}">{{ year.name }}</a></h2>
+    <ul class="notes-list">
+      {% for post in year.items %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
+        <div class="notes-item">
+          {% if post.redirect contains '://' -%}
+          <a class="notes-title" href="{{ post.redirect }}" target="_blank" rel="noopener">{{ post.title }}</a>
+          {%- else -%}
+          <a class="notes-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {%- endif %}
+          {% if post.description %}<span class="notes-description">{{ post.description }}</span>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+
+  {% if site.posts.size == 0 %}
+  <p>No notes yet.</p>
+  {% endif %}
+
+</div>

@@ -1,0 +1,118 @@
+---
+layout: default
+---
+<!-- _layouts/home.html: landing page (hero, research areas, group, selected papers, notes) -->
+<div class="home">
+
+  <!-- Hero -->
+  <section class="hero full-bleed">
+    <div class="container-wide">
+      <div class="row align-items-center">
+        <div class="col-md-8 hero-text">
+          <h1 class="hero-name">
+            {% if site.title == "blank" -%}{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+          </h1>
+          <p class="hero-titles">{{ page.subtitle }}</p>
+          {% if page.tagline -%}
+          <p class="hero-lede">{{ page.tagline }}</p>
+          {%- endif %}
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="{{ '/research/' | relative_url }}">Research</a>
+            <a class="btn btn-outline" href="{{ '/group/' | relative_url }}">Meet the group</a>
+            <a class="btn btn-outline" href="{{ '/publications/' | relative_url }}">Publications</a>
+          </div>
+        </div>
+        {% if page.profile.image -%}
+        <div class="col-md-4 hero-portrait">
+          {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+          {% include figure.html path=profile_image_path class="img-fluid rounded z-depth-1" alt="Portrait of Maximiliano Isi" cache_bust=true %}
+          {%- if page.profile.caption %}<p class="hero-portrait-caption">{{ page.profile.caption }}</p>{% endif -%}
+        </div>
+        {%- endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="home-section measure" id="about">
+    {{ content }}
+  </section>
+
+  <!-- Research areas -->
+  <section class="home-section" id="research">
+    <h2 class="section-title"><a href="{{ '/research/' | relative_url }}">Research</a></h2>
+    {% include research_grid.html %}
+  </section>
+
+  <!-- Group -->
+  <section class="home-section" id="group">
+    <h2 class="section-title"><a href="{{ '/group/' | relative_url }}">Group</a></h2>
+    <div class="row align-items-center group-strip">
+      <div class="col-md-7">
+        <div class="avatar-strip">
+          {%- assign members = site.data.people.members | where_exp: "m", "m.role != 'pi'" -%}
+          {% for person in members %}
+          <a href="{{ '/group/' | relative_url }}#{{ person.id }}" title="{{ person.name }}">
+            {% include person_avatar.html person=person variant="sm" %}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-md-5 group-strip-text">
+        {%- assign n_postdoc = site.data.people.members | where: "role", "postdoc" | size -%}
+        {%- assign n_phd = site.data.people.members | where: "role", "phd" | size -%}
+        {%- assign n_ug = site.data.people.members | where: "role", "undergrad" | size -%}
+        <p>
+          The group brings together {{ n_postdoc }} postdoctoral researchers, {{ n_phd }} graduate students
+          and {{ n_ug }} undergraduates across Columbia University and the Flatiron Institute's Center for
+          Computational Astrophysics.
+        </p>
+        <a class="btn btn-outline btn-sm" href="{{ '/group/' | relative_url }}">Meet the group</a>
+        <a class="btn btn-outline btn-sm" href="{{ '/group/' | relative_url }}#join">Join us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected papers -->
+  {% if page.selected_papers -%}
+  <section class="home-section measure" id="publications">
+    <h2 class="section-title"><a href="{{ '/publications/' | relative_url }}">Selected publications</a></h2>
+    <div class="stats-line">{% include inspire_stats.html %}</div>
+    {% include selected_papers.html %}
+    <p class="section-more"><a href="{{ '/publications/' | relative_url }}">All publications &rarr;</a></p>
+  </section>
+  {%- endif %}
+
+  <!-- News -->
+  {% if page.news and site.news.size > 0 -%}
+  <section class="home-section measure" id="news">
+    <h2 class="section-title"><a href="{{ '/news/' | relative_url }}">News</a></h2>
+    {% include news.html limit=true %}
+  </section>
+  {%- endif %}
+
+  <!-- Latest notes -->
+  {% if page.latest_posts and site.posts.size > 0 -%}
+  <section class="home-section measure" id="notes">
+    <h2 class="section-title"><a href="{{ '/notes/' | relative_url }}">Latest notes</a></h2>
+    {% include latest_posts.html %}
+    <p class="section-more"><a href="{{ '/notes/' | relative_url }}">All notes &rarr;</a></p>
+  </section>
+  {%- endif %}
+
+  <!-- Contact -->
+  {% if page.social -%}
+  <section class="home-section measure" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="social">
+      <div class="contact-icons">
+        {% include social.html %}
+      </div>
+      <div class="contact-note">
+        {{ site.contact_note }}
+      </div>
+    </div>
+  </section>
+  {%- endif %}
+
+</div>

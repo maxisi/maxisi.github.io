@@ -2,9 +2,9 @@
 layout: cv
 permalink: /cv/
 title: cv
-description: for a comprehensive curriculum vitae, please contact me directly
+description: a short curriculum vitae; please get in touch for the full version
 nav: true
-nav_order: 4
+nav_order: 7
 # cv_pdf: example_pdf.pdf
 toc:
   sidebar: left
