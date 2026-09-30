@@ -1,0 +1,21 @@
+{%- comment -%}
+Teaching record for the CV, from _data/teaching.yml (shared with /teaching/).
+{%- endcomment -%}
+{%- assign t = site.data.teaching -%}
+<ul class="cv-plain-list">
+  {% for c in t.courses %}
+  <li><strong>{{ c.role }}</strong>, {{ c.institution }} ({{ c.years }}): <em>{{ c.title }}</em> ({{ c.code }}).</li>
+  {% endfor %}
+  {% for g in t.guest_lectures %}
+  <li><strong>Guest lecturer</strong>, {{ g.institution }} ({{ g.year }}): {{ g.courses | join: "; " }}.</li>
+  {% endfor %}
+</ul>
+{%- if t.schools %}
+<p class="cv-group-title">Summer schools</p>
+<ul class="cv-plain-list">
+  {% for s in t.schools %}
+  <li><em>{{ s.name }}</em>, {{ s.institution }} ({{ s.year }}).{% if s.description %} {{ s.description }}{% endif %}</li>
+  {% endfor %}
+</ul>
+{%- endif %}
+<p class="cv-group-text">Full details on the <a href="{{ '/teaching/' | relative_url }}">teaching page</a>.</p>

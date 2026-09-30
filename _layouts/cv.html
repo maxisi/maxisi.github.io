@@ -6,8 +6,16 @@ layout: default
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }} {% if page.cv_pdf %}<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>{% endif %}</h1>
+    <h1 class="post-title">{{ page.title }}</h1>
       {% if page.description %}<p class="post-description">{{ page.description }}</p>{% endif %}
+      {% if page.cv_pdf %}
+      {%- assign pdf_path = page.cv_pdf | prepend: '/assets/pdf/' -%}
+      <p class="cv-download">
+        <a class="btn btn-primary" href="{{ pdf_path | relative_url }}" download><i class="fas fa-file-pdf"></i>&nbsp; Download PDF</a>
+        <a class="btn btn-outline" href="{{ pdf_path | relative_url }}" target="_blank" rel="noopener noreferrer">Open in browser</a>
+        {%- if page.cv_pdf_updated %} <span class="cv-download-note">PDF updated {{ page.cv_pdf_updated | date: "%B %-d, %Y" }}.</span>{% endif -%}
+      </p>
+      {% endif %}
   </header>
 
   <article>
@@ -27,6 +35,14 @@ layout: default
             {% include cv/time_table.html %}
           {% elsif entry.type == "list_groups" %}
             {% include cv/list_groups.html %}
+          {% elsif entry.type == "dated_list" %}
+            {% include cv/dated_list.html %}
+          {% elsif entry.type == "grouped" %}
+            {% include cv/grouped.html %}
+          {% elsif entry.type == "text" %}
+            <div class="cv-text">{{ entry.contents | markdownify }}</div>
+          {% elsif entry.type == "include" %}
+            {% include {{ entry.include }} %}
           {% else %}
             {{ entry.contents }}
           {% endif %}

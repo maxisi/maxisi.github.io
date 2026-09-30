@@ -1,0 +1,21 @@
+{%- comment -%}
+Compact dated rows for the CV: year badge, title (linked when `url` is set),
+one-line `meta`, optional `note` (shown muted below) and `tags` (small chips).
+Reads `entry.contents`.
+{%- endcomment -%}
+{%- assign cv_contents = include.contents | default: entry.contents -%}
+<ul class="cv-dated-list">
+  {% for item in cv_contents %}
+  <li>
+    <span class="cv-dated-year">{{ item.year }}</span>
+    <div class="cv-dated-body">
+      <span class="cv-dated-title">
+        {%- if item.url -%}<a href="{{ item.url }}">{{ item.title }}</a>{%- else -%}{{ item.title }}{%- endif -%}
+        {%- if item.tags -%}{% for tag in item.tags %} <span class="cv-tag">{{ tag }}</span>{% endfor %}{%- endif -%}
+      </span>
+      {%- if item.meta %}<span class="cv-dated-meta">{{ item.meta }}</span>{% endif -%}
+      {%- if item.note %}<span class="cv-dated-note">{{ item.note }}</span>{% endif -%}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
