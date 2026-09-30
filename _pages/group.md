@@ -50,8 +50,8 @@ black holes, statistical inference or scientific machine learning.
   mention your interest in the group in your application and feel free to email beforehand.</li>
   <li><strong>Postdoctoral researchers</strong> are typically supported through fellowships such as the
   <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-astrophysics/">Flatiron Research Fellowship</a>
-  at CCA, the <a href="https://www.stsci.edu/stsci-research/fellowships/nasa-hubble-fellowship-program">NASA Hubble Fellowship</a>,
-  or Columbia's own postdoctoral fellowships. Please reach out before applying so we can coordinate.</li>
+  at CCA or the <a href="https://www.stsci.edu/stsci-research/fellowships/nasa-hubble-fellowship-program">NASA Hubble Fellowship</a>.
+  Please reach out before applying so we can coordinate.</li>
 </ul>
 <p>Contact: <a href="mailto:{{ site.email | encode_email }}">{{ site.email }}</a>.</p>
 </div>
