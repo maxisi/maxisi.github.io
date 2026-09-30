@@ -7,7 +7,7 @@
 > 3. Three research lines: black-hole ringdowns, black-hole populations, machine-learning and statistical methods.
 >    One page (`/research/`) with anchors; home-page cards link to them. Bib entries tagged with `keywords`.
 > 4. Roster in `_data/people.yml`: PI; postdocs Konstantin Leyde, Asad Hussain, Jack Heinzel, Simona Miller (Hubble Fellow, CUNY);
->    PhD students Abigail Moran, Ana Lam, Lauren Mendoza; undergraduates Tata Tirapongprasert, Sarah Yuh, Candice Wu, Nathan Rodgers.
+>    PhD students Abigail Moran, Ana Lam, Lauren Mendoza; undergraduates Tata Tirapongprasert, Sarah Yuh, Candice Wu, Nathaniel Rodgers.
 >    Alumni list seeded from the mentee markers in the bibliography (details to fill in).
 > 5. Teaching from the CV (`~/src/cv/maxisi_cv.tex`, Teaching section) in `_data/teaching.yml`.
 > 6. Blog is called "Notes"; no comments.
