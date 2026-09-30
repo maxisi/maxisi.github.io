@@ -1,0 +1,39 @@
+{%- comment -%}
+Grid of people cards for one role from _data/people.yml.
+Parameter: role (a `key` from the `roles` list).
+{%- endcomment -%}
+{%- assign people = site.data.people.members | where: "role", include.role -%}
+<div class="row people-grid">
+  {% for person in people %}
+  <div class="col-6 col-md-3 mb-4">
+    <div class="person" id="{{ person.id }}">
+      {% include person_avatar.html person=person %}
+      <div class="person-name">
+        {%- if person.links.website -%}<a href="{{ person.links.website }}">{{ person.name }}</a>{%- else -%}{{ person.name }}{%- endif -%}
+      </div>
+      <div class="person-title">{{ person.title }}</div>
+      {%- if person.blurb %}
+      <div class="person-blurb">{{ person.blurb }}</div>
+      {%- endif %}
+      {%- if person.research %}
+      <div class="person-areas">
+        {%- for slug in person.research -%}
+          {%- assign area = site.research | where: "slug", slug | first -%}
+          {%- if area %}<a class="chip" href="{{ '/research/' | relative_url }}#{{ area.slug }}">{{ area.title }}</a>{% endif -%}
+        {%- endfor -%}
+      </div>
+      {%- endif %}
+      {%- if person.links and person.links.size > 0 %}
+      <div class="person-links">
+        {%- if person.links.website %}<a href="{{ person.links.website }}" title="website"><i class="fas fa-link"></i></a>{% endif -%}
+        {%- if person.links.email %}<a href="mailto:{{ person.links.email | encode_email }}" title="email"><i class="fas fa-envelope"></i></a>{% endif -%}
+        {%- if person.links.github %}<a href="https://github.com/{{ person.links.github }}" title="GitHub"><i class="fab fa-github"></i></a>{% endif -%}
+        {%- if person.links.orcid %}<a href="https://orcid.org/{{ person.links.orcid }}" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif -%}
+        {%- if person.links.scholar %}<a href="https://scholar.google.com/citations?user={{ person.links.scholar }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif -%}
+        {%- if person.links.linkedin %}<a href="https://www.linkedin.com/in/{{ person.links.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin"></i></a>{% endif -%}
+      </div>
+      {%- endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

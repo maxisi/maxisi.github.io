@@ -1,7 +1,7 @@
 ---
 ---
 <!-- _layouts/bib.html -->
-      <div class="row">
+      <div class="row" data-keywords="{{ entry.keywords | default: "" }}" data-year="{{ entry.year }}">
         {%- if site.enable_publication_thumbnails -%}
         <div class="col-sm-2 {% if entry.preview and entry.preview != "none" %}preview{% else %}abbr{% endif %}">
         {%- if entry.preview and entry.preview != "none" -%}

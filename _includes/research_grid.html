@@ -1,0 +1,21 @@
+{%- comment -%}
+Cards for the research areas in _research/ (sorted by `order`), linking to the
+matching section of /research/.
+{%- endcomment -%}
+{%- assign areas = site.research | sort: "order" -%}
+<div class="row research-grid">
+  {% for area in areas %}
+  <div class="col-md-4 mb-4 d-flex">
+    <a class="research-card card hoverable" href="{{ '/research/' | relative_url }}#{{ area.slug }}">
+      <div class="research-card-img">
+        <img src="{{ area.img | relative_url }}" alt="" loading="lazy">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">{{ area.title }}</h3>
+        <p class="card-text">{{ area.summary }}</p>
+        <span class="card-more">Read more &rarr;</span>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>

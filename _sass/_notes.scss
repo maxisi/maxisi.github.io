@@ -1,0 +1,26 @@
+// Tables in notebook-derived notes (emitted by bin/import_gists.py for
+// HTML outputs such as pandas DataFrames).  Imported from assets/css/main.scss.
+
+.notes-table {
+  overflow-x: auto;
+  margin: 1rem 0;
+
+  table {
+    font-size: 0.85rem;
+    color: var(--global-text-color);
+    border-collapse: collapse;
+    margin: 0 auto;
+
+    th,
+    td {
+      padding: 0.25rem 0.6rem;
+      border: 1px solid var(--global-divider-color);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    thead th {
+      border-bottom: 2px solid var(--global-divider-color);
+    }
+  }
+}

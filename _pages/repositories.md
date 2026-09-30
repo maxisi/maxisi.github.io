@@ -1,37 +1,11 @@
 ---
 layout: page
-permalink: /repositories/
+permalink: /software/
 title: software
-description: here is some of my open-access software.
+description: open-source software written or co-developed by the group. Details are refreshed weekly from GitHub.
 nav: true
-nav_order: 3
+nav_order: 6
 ---
-
-{% if site.data.repositories.github_users %}
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-stretch">
-  {% for user in site.data.repositories.github_users %}
-    {% include repository/repo_user.html username=user %}
-  {% endfor %}
-</div>
-
----
-
-{% if site.repo_trophies.enabled %}
-{% for user in site.data.repositories.github_users %}
-  {% if site.data.repositories.github_users.size > 1 %}
-  <h4>{{ user }}</h4>
-  {% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-stretch">
-  {% include repository/repo_trophies.html username=user %}
-  </div>
-
-  ---
-
-{% endfor %}
-{% endif %}
-{% endif %}
-
-<!-- ## GitHub Repositories -->
 
 {% if site.data.repositories.github_repos %}
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-stretch">

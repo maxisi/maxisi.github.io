@@ -5,14 +5,17 @@
 
 // Dimensions
 $max-content-width: {{ site.max_width }};
+$max-content-width-wide: {{ site.max_width_wide | default: '1100px' }};
 
 @import
   "variables",
   "themes",
   "layout",
   "base",
-  "distill",
   "cv",
+  "home",
+  "group",
+  "notes",
   "font-awesome/fontawesome",
   "font-awesome/brands",
   "font-awesome/solid",

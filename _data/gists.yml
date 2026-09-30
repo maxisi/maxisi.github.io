@@ -1,0 +1,110 @@
+# Public gists (single-file Jupyter notebooks) turned into notes by
+# bin/import_gists.py, which writes _posts/<date>-<slug>.md, saves the notebook
+# under assets/notebooks/ and its figures under assets/img/notes/<slug>/.
+#
+# Format (kept deliberately simple: the importer parses it without PyYAML):
+#   - a flat list; each entry starts with "- id:" and continues with indented
+#     "key: value" lines;
+#   - values are plain scalars (optionally in single or double quotes) except
+#     "tags", which is an inline list like [noise, waveforms];
+#   - no nesting, no multi-line values, no anchors; "#" starts a comment.
+#
+# Keys
+#   id           gist id (https://gist.github.com/maxisi/<id>)
+#   slug         URL slug and basename for the post, notebook and figures
+#   title        post title, sentence case
+#   date         post date (gist creation date), YYYY-MM-DD
+#   tags         1-3 of: data-access, noise, waveforms, hierarchical-inference,
+#                parameter-estimation, populations, ringdown, gpu
+#   description  one plain sentence, shown in the notes index
+
+- id: 9d535e29b11f1829848e89c4af9608cc
+  slug: get-design-acf
+  title: Computing the autocovariance function of the LIGO-Virgo design noise spectrum
+  date: 2024-03-01
+  tags: [noise, ringdown]
+  description: Turn the LALSimulation design PSDs for LIGO and Virgo into time-domain autocovariance functions and check that the resulting covariance matrix is positive definite
+
+- id: db17a3d8d8ae7772a8b298a3b9b1aed3
+  slug: hier-numpyro-gpu
+  title: Fitting a hierarchical Gaussian model with NumPyro on a GPU
+  date: 2023-07-27
+  tags: [hierarchical-inference, gpu]
+  description: The same KDE-smoothed hierarchical Gaussian fit as the CPU version, run with NUTS on a single CUDA device
+
+- id: 2ce82fae45da4f12721d6b981e742732
+  slug: hier-numpyro-cpu
+  title: Fitting a hierarchical Gaussian model with NumPyro on CPUs
+  date: 2023-07-27
+  tags: [hierarchical-inference]
+  description: Infer the mean and width of a Gaussian population from per-event posterior samples with NumPyro, using a KDE to smooth the samples and parallel chains across CPU cores
+
+- id: bc1f20aeafc29422ce33c99fd5817c70
+  slug: hier-pymc
+  title: Fitting a hierarchical Gaussian model with PyMC
+  date: 2023-05-22
+  tags: [hierarchical-inference]
+  description: Infer the mean and width of a Gaussian population from per-event posterior samples with PyMC, using a KDE to smooth the samples
+
+- id: 22e4c460da0edd0cc5a8ea106a7a718a
+  slug: fetching-gwosc-data-bulk
+  title: Downloading LIGO strain data in bulk from GWOSC
+  date: 2023-05-20
+  tags: [data-access, noise]
+  description: Find, download and read a day of public LIGO strain around GW150914 from several GWOSC files, then split it into short noise-only segments while dealing with gaps
+
+- id: e3847dfe3d81d2c306f6efa518f0e732
+  slug: fetching-psds
+  title: Retrieving the noise spectra used in LVK parameter estimation
+  date: 2023-05-15
+  tags: [data-access, noise, parameter-estimation]
+  description: Locate the latest parameter-estimation release for an event in the GWOSC catalog and pull the per-detector PSDs out of the data file
+
+- id: 2a65bb55720d2856b931a3427ae4f0ee
+  slug: injection-draws
+  title: A probability density for drawing injections in a selection-function study
+  date: 2023-03-06
+  tags: [populations]
+  description: A vectorized density over masses, spins and redshift, with hard bounds, from which to draw injections for estimating a detection selection function
+
+- id: 7c54e438ccc71d45a4b067b883e4d337
+  slug: fetching-gwosc-data
+  title: Downloading and reading LIGO strain data around GW150914
+  date: 2023-03-05
+  tags: [data-access, noise]
+  description: A short primer on gravitational-wave strain data, then download an hour of public LIGO data with wget, read it with h5py and chop it into noise-only segments
+
+- id: 7d63b4878a48e5e1c5e0307159bb3e09
+  slug: simulate-gw-noise
+  title: Simulating detector noise from a power spectral density
+  date: 2023-02-03
+  tags: [noise]
+  description: Draw Gaussian noise for LIGO and Virgo from their design PSDs in the frequency domain, transform to the time domain and check the result with a Welch estimate
+
+- id: e3bb4af28edd892b38448340a3e90a75
+  slug: lalsim-td-waveform
+  title: Time-domain waveforms with LALSimulation and projection onto a detector
+  date: 2022-10-10
+  tags: [waveforms]
+  description: Generate an NRSur7dq4 waveform with ChooseTDWaveform, window and Fourier transform it, and project it onto LIGO Hanford with antenna patterns and the geocenter time delay
+
+- id: d033b94be8af4b7d3b0e167f7574224f
+  slug: loading-pe-samples
+  title: Reading LVK parameter-estimation samples with h5py
+  date: 2022-06-29
+  tags: [data-access, parameter-estimation]
+  description: Download a GWTC-3 posterior release from Zenodo and read the samples directly with h5py, without PESummary
+
+- id: b69fe76603fcc2f07d8bb0634eb41111
+  slug: sim-q-chi-posteriors
+  title: Simulating black-hole charge and spin posteriors
+  date: 2022-05-03
+  tags: [populations, hierarchical-inference]
+  description: Draw fake posteriors for black-hole charge and spin from a simple population model in polar coordinates that respects the cosmic-censorship bound
+
+- id: f768d30911756bc7c805b5097e3c7019
+  slug: lalsim-fd-waveform
+  title: Frequency-domain waveforms with LALSimulation
+  date: 2022-04-22
+  tags: [waveforms]
+  description: Generate an IMRPhenomD waveform with ChooseFDWaveform, plot its amplitude and phase, and inverse-Fourier transform it to the time domain

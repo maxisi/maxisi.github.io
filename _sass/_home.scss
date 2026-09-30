@@ -1,0 +1,295 @@
+/*******************************************************************************
+ * Landing page: hero, section headings, research cards, group strip.
+ ******************************************************************************/
+
+// Hero band ------------------------------------------------------------------
+
+.hero {
+  background: var(--global-hero-bg);
+  border-bottom: 1px solid var(--global-divider-color);
+  padding: 3.5rem 0 3rem;
+  margin-top: -3rem; // undo the container's mt-5 so the band touches the navbar
+  margin-bottom: 3rem;
+
+  .hero-name {
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: 2.75rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-titles {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--global-text-color-muted);
+    margin-bottom: 1.25rem;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--global-divider-color);
+      text-underline-offset: 3px;
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration-color: currentColor;
+      }
+    }
+  }
+
+  .hero-lede {
+    font-size: 1.2rem;
+    line-height: 1.55;
+    max-width: 38em;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .hero-portrait {
+    text-align: center;
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      max-width: 260px;
+      width: 100%;
+    }
+
+    .hero-portrait-caption {
+      font-size: 0.7rem;
+      color: var(--global-text-color-muted);
+      margin: 0.5rem 0 0;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 2.25rem 0 2rem;
+
+    .hero-name {
+      font-size: 2.1rem;
+    }
+
+    .hero-lede {
+      font-size: 1.05rem;
+    }
+
+    .hero-portrait {
+      margin-top: 1.5rem;
+
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
+// Buttons used across the new pages -----------------------------------------
+
+.btn.btn-primary,
+.btn.btn-outline {
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 0.55rem 1.2rem;
+  box-shadow: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  &.btn-sm {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.95rem;
+  }
+}
+
+.btn.btn-primary {
+  background-color: var(--global-theme-color) !important;
+  border: 1px solid var(--global-theme-color);
+  color: var(--global-bg-color) !important;
+
+  &:hover,
+  &:focus {
+    background-color: var(--global-hover-color) !important;
+    border-color: var(--global-hover-color);
+    color: var(--global-hover-text-color) !important;
+    text-decoration: none;
+  }
+}
+
+.btn.btn-outline {
+  background: transparent;
+  border: 1px solid var(--global-divider-color);
+  color: var(--global-text-color) !important;
+
+  &:hover,
+  &:focus {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color) !important;
+    text-decoration: none;
+  }
+}
+
+// Sections -------------------------------------------------------------------
+
+.home-section {
+  margin-bottom: 3.5rem;
+
+  .section-title {
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .section-more {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .stats-line {
+    font-size: 0.9rem;
+    color: var(--global-text-color-muted);
+    margin-bottom: 1rem;
+
+    big {
+      font-size: 1rem;
+    }
+  }
+
+  .publications {
+    margin-top: 0;
+  }
+}
+
+// Research cards -------------------------------------------------------------
+
+.research-grid {
+  .research-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--global-card-border);
+    border-radius: 8px;
+    overflow: hidden;
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+
+      .card-title {
+        color: var(--global-theme-color);
+      }
+
+      .card-more {
+        color: var(--global-theme-color);
+      }
+    }
+
+    .research-card-img {
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+      background: var(--global-hero-bg);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &:hover .research-card-img img {
+      transform: scale(1.03);
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      padding: 1.1rem 1.25rem 1.25rem;
+      text-align: left;
+    }
+
+    .card-title {
+      font-family: $font-family-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: var(--global-text-color-muted);
+      flex: 1 1 auto;
+    }
+
+    .card-more {
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 0.75rem;
+      color: var(--global-text-color-muted);
+    }
+  }
+}
+
+// Group strip on the home page ----------------------------------------------
+
+.group-strip {
+  .avatar-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    a {
+      display: inline-flex;
+      border-radius: 50%;
+      transition: transform 0.15s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .group-strip-text {
+    p {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--global-text-color-muted);
+    }
+
+    .btn {
+      margin: 0.25rem 0.35rem 0 0;
+    }
+
+    @media (max-width: 767.98px) {
+      margin-top: 1.25rem;
+    }
+  }
+}

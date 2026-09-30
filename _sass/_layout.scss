@@ -26,6 +26,37 @@ body.sticky-bottom-footer {
   max-width: $max-content-width;
 }
 
+// Pages with `wide: true` in their front matter get a wider container
+// (hero, cards, people grids); prose inside them is kept at reading width.
+.container-wide {
+  width: 100%;
+  max-width: $max-content-width-wide;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.measure {
+  max-width: $max-content-width;
+}
+
+// Bootstrap lays the navbar out through `.navbar > .container`; give the wide
+// container the same flex behaviour.
+.navbar > .container-wide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Break out of the container to span the full viewport width.
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
 // Profile
 .profile {
   img {

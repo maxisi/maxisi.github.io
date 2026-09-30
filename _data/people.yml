@@ -1,0 +1,125 @@
+# People shown on /group/ and in the group strip on the home page.
+#
+# Each member has:
+#   id        short slug, used for anchors (#id) and cross-references from _research/*.md
+#   name      display name
+#   role      one of the `key`s under `roles` below (sections on the group page, in this order)
+#   title     one line shown under the name (position and institution)
+#   start     year they joined (optional; shown as "2025–" while current)
+#   photo     file in assets/img/people/ (optional; a placeholder with initials is used otherwise)
+#   blurb     one sentence on what they work on (optional)
+#   research  list of research-area slugs from _research/ (optional; adds them to the area's "People")
+#   links     any of website, github, orcid, email, scholar, linkedin (optional)
+#
+# Alumni go under `alumni` with `end` and `now` (current position) once known.
+
+roles:
+  - key: pi
+    title: Principal investigator
+  - key: postdoc
+    title: Postdoctoral researchers
+  - key: phd
+    title: Graduate students
+  - key: undergrad
+    title: Undergraduate students
+
+members:
+  - id: isi
+    name: Maximiliano Isi
+    role: pi
+    title: Assistant Professor, Columbia University · Associate Research Scientist, Flatiron Institute
+    photo: /assets/img/prof_pic.jpg
+    links:
+      email: msi2114@columbia.edu
+      github: maxisi
+      orcid: 0000-0001-8830-8672
+
+  - id: leyde
+    name: Konstantin Leyde
+    role: postdoc
+    title: Postdoctoral researcher, Center for Computational Astrophysics
+    links: {}
+
+  - id: hussain
+    name: Asad Hussain
+    role: postdoc
+    title: Postdoctoral researcher, Center for Computational Astrophysics
+    blurb: Spin distributions and subpopulations of merging black holes.
+    research: [populations]
+    links: {}
+
+  - id: heinzel
+    name: Jack Heinzel
+    role: postdoc
+    title: Postdoctoral researcher, Center for Computational Astrophysics
+    links: {}
+
+  - id: miller
+    name: Simona Miller
+    role: postdoc
+    title: Hubble Fellow, CUNY · Center for Computational Astrophysics
+    blurb: Spin precession and time-domain inference for massive black-hole binaries.
+    research: [populations, methods]
+    links:
+      github: simonajmiller
+
+  - id: moran
+    name: Abigail Moran
+    role: phd
+    title: PhD student, Columbia University
+    links: {}
+
+  - id: lam
+    name: Ana Lam
+    role: phd
+    title: PhD student, Columbia University
+    links: {}
+
+  - id: mendoza
+    name: Lauren Mendoza
+    role: phd
+    title: PhD student, Columbia University
+    links: {}
+
+  - id: tirapongprasert
+    name: Tata Tirapongprasert
+    role: undergrad
+    title: Undergraduate researcher, Columbia University
+    links: {}
+
+  - id: yuh
+    name: Sarah Yuh
+    role: undergrad
+    title: Undergraduate researcher, Columbia University
+    links: {}
+
+  - id: wu
+    name: Candice Wu
+    role: undergrad
+    title: Undergraduate researcher, Columbia University
+    links: {}
+
+  - id: rodgers
+    name: Nathan Rodgers
+    role: undergrad
+    title: Undergraduate researcher, Columbia University
+    links: {}
+
+# Former group members and mentees.  The names below are the co-authors marked
+# as mentees (with an asterisk) in _bibliography/papers.bib; fill in `role`,
+# years and `now` (with `now_url`) as appropriate.
+alumni:
+  - name: Keefe Mitman
+  - name: Nicole M. Khusid
+  - name: Harrison Siegel
+  - name: Chengcheng Xin
+  - name: Ronan Legin
+  - name: Haowen Zhong
+  - name: Ethan Payne
+  - name: Teagan A. Clarke
+  - name: Jacob Golomb
+  - name: Hengrui Zhu
+  - name: Sylvia Biscoveanu
+  - name: Thomas C. K. Ng
+  - name: Ken K. Y. Ng
+  - name: Yiwen Huang

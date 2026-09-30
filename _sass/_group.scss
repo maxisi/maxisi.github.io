@@ -1,0 +1,409 @@
+/*******************************************************************************
+ * People (group page, avatars, chips), research page, teaching page, notes index.
+ ******************************************************************************/
+
+// Avatars --------------------------------------------------------------------
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--global-chip-bg);
+  color: var(--global-text-color-muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  border: 1px solid var(--global-divider-color);
+
+  &.avatar-md {
+    width: 120px;
+    height: 120px;
+    font-size: 2rem;
+  }
+
+  &.avatar-sm {
+    width: 52px;
+    height: 52px;
+    font-size: 1rem;
+  }
+
+  &.avatar-xs {
+    width: 24px;
+    height: 24px;
+    font-size: 0.6rem;
+    vertical-align: middle;
+  }
+}
+
+// Chips (research areas on people cards, tags on the notes index) -------------
+
+.chip {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  padding: 0.25em 0.7em;
+  margin: 0.15rem 0.2rem 0.15rem 0;
+  border-radius: 999px;
+  background: var(--global-chip-bg);
+  color: var(--global-text-color-muted) !important;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--global-theme-color);
+    color: var(--global-bg-color) !important;
+    text-decoration: none;
+  }
+}
+
+// Group page -----------------------------------------------------------------
+
+.people-role {
+  font-family: $font-family-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  &:first-of-type {
+    margin-top: 0.5rem;
+  }
+}
+
+.people-grid {
+  .person {
+    text-align: center;
+    padding: 0 0.25rem;
+
+    .avatar {
+      margin-bottom: 0.75rem;
+    }
+
+    .person-name {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.3;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .person-title {
+      font-size: 0.8rem;
+      line-height: 1.4;
+      color: var(--global-text-color-muted);
+      margin-top: 0.15rem;
+    }
+
+    .person-blurb {
+      font-size: 0.82rem;
+      line-height: 1.45;
+      margin-top: 0.5rem;
+    }
+
+    .person-areas {
+      margin-top: 0.4rem;
+    }
+
+    .person-links {
+      margin-top: 0.4rem;
+      font-size: 0.95rem;
+
+      a {
+        color: var(--global-text-color-muted);
+        margin: 0 0.3rem;
+
+        &:hover {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
+
+.alumni-list {
+  list-style: none;
+  padding: 0;
+  columns: 2;
+  column-gap: 2.5rem;
+  font-size: 0.95rem;
+
+  li {
+    break-inside: avoid;
+    margin-bottom: 0.4rem;
+  }
+
+  .alumni-meta,
+  .alumni-now {
+    color: var(--global-text-color-muted);
+    font-size: 0.85rem;
+    margin-left: 0.3rem;
+  }
+
+  @media (max-width: 575.98px) {
+    columns: 1;
+  }
+}
+
+.measure-left {
+  max-width: $max-content-width;
+}
+
+// Research page --------------------------------------------------------------
+
+.research-area {
+  padding-top: 1rem;
+  margin-bottom: 3.5rem;
+  scroll-margin-top: 70px;
+
+  & + & {
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 2.5rem;
+  }
+
+  .research-area-title {
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: 1.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .research-area-summary {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--global-text-color-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .research-area-text p {
+    line-height: 1.65;
+  }
+
+  .research-area-side {
+    @media (max-width: 767.98px) {
+      margin-top: 1rem;
+    }
+  }
+
+  .research-area-figure {
+    margin-bottom: 1.25rem;
+
+    img {
+      width: 100%;
+    }
+
+    .caption {
+      font-size: 0.7rem;
+      text-align: right;
+    }
+  }
+
+  .research-area-subtitle {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--global-text-color-muted);
+    margin: 1.25rem 0 0.6rem;
+  }
+
+  .research-area-people {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+
+    li {
+      margin-bottom: 0.35rem;
+    }
+
+    a {
+      color: var(--global-text-color);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .research-area-software .repo {
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .research-area-papers {
+    margin-top: 0;
+
+    ol.bibliography li {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .section-more {
+    font-size: 0.9rem;
+  }
+}
+
+// Teaching page --------------------------------------------------------------
+
+.teaching-courses {
+  margin-bottom: 1.5rem;
+
+  .course {
+    display: flex;
+    gap: 1.25rem;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: 1px solid var(--global-divider-color);
+    }
+  }
+
+  .course-code {
+    flex: 0 0 7.5rem;
+    font-family: $font-family-monospace;
+    font-size: 0.85rem;
+    color: var(--global-text-color-muted);
+    padding-top: 0.15rem;
+  }
+
+  .course-title {
+    font-weight: 600;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .course-meta {
+    font-size: 0.85rem;
+    color: var(--global-text-color-muted);
+  }
+
+  .course-description {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+
+  @media (max-width: 575.98px) {
+    .course {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+}
+
+.teaching-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+// Notes index ----------------------------------------------------------------
+
+.notes-index {
+  .notes-tags {
+    margin-bottom: 2rem;
+  }
+
+  .notes-year-title {
+    font-family: $font-family-serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    margin: 1.75rem 0 0.75rem;
+
+    a {
+      color: var(--global-text-color-muted);
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      gap: 1rem;
+      padding: 0.55rem 0;
+      border-top: 1px solid var(--global-divider-color);
+
+      &:last-child {
+        border-bottom: 1px solid var(--global-divider-color);
+      }
+    }
+
+    time {
+      flex: 0 0 4.5rem;
+      font-family: $font-family-monospace;
+      font-size: 0.8rem;
+      color: var(--global-text-color-muted);
+      padding-top: 0.2rem;
+    }
+
+    .notes-title {
+      font-weight: 500;
+      color: var(--global-text-color);
+
+      &:hover {
+        color: var(--global-theme-color);
+        text-decoration: none;
+      }
+    }
+
+    .notes-description {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--global-text-color-muted);
+      margin-top: 0.1rem;
+    }
+  }
+}
+
+.post-source {
+  font-size: 0.85rem;
+  color: var(--global-text-color-muted);
+  margin-top: -0.5rem;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+// Publications page filter --------------------------------------------------
+
+.pub-filter {
+  margin: 1.25rem 0 0;
+  font-size: 0.85rem;
+
+  .pub-filter-label {
+    color: var(--global-text-color-muted);
+    margin-right: 0.3rem;
+  }
+
+  .chip.active {
+    background: var(--global-theme-color);
+    color: var(--global-bg-color) !important;
+  }
+}
+
+.pub-hidden {
+  display: none !important;
+}
