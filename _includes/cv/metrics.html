@@ -1,0 +1,25 @@
+{%- comment -%}
+Publication metrics for the CV, from _data/inspire_stats.yml (refreshed weekly
+by bin/update_inspire_stats.py).  First number includes LIGO collaboration
+papers, second excludes them.
+{%- endcomment -%}
+{%- assign s = site.data.inspire_stats -%}
+{%- assign collab = s.all.publications | minus: s.noncollab.publications -%}
+<div class="cv-metrics">
+  <div class="cv-metric">
+    <span class="cv-metric-label">h-index</span>
+    <span class="cv-metric-value"><a href="{{ s.all.url }}">{{ s.all.hindex }}</a> <span class="cv-metric-sep">/</span> <a href="{{ s.noncollab.url }}">{{ s.noncollab.hindex }}</a></span>
+  </div>
+  <div class="cv-metric">
+    <span class="cv-metric-label">publications</span>
+    <span class="cv-metric-value">{{ s.all.publications }} <span class="cv-metric-sep">/</span> {{ s.noncollab.publications }}</span>
+  </div>
+  <div class="cv-metric">
+    <span class="cv-metric-label">citations</span>
+    <span class="cv-metric-value">{{ s.all.citations_short }} <span class="cv-metric-sep">/</span> {{ s.noncollab.citations_short }}</span>
+  </div>
+</div>
+<p class="cv-metrics-note">
+  Citable records on <a href="https://inspirehep.net/authors/1275240">INSPIRE-HEP</a>; the first number includes
+  the {{ collab }} LIGO–Virgo–KAGRA collaboration papers, the second excludes them. Updated {{ s.updated | date: "%B %-d, %Y" }}.
+</p>

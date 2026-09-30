@@ -15,7 +15,7 @@ and deployed to GitHub Pages by `.github/workflows/deploy.yml`.
 | News (home page and `/news/`) | one file per item in `_news/` (`layout: post`, `date`, `inline: true`, body) |
 | Notes (`/notes/`) | `_posts/`; see below for notebooks |
 | Software cards (`/software/` and research pages) | list of `owner/repo` in `_data/repositories.yml` |
-| CV (`/cv/`) | `_data/cv.yml` |
+| CV (`/cv/`) | `_data/cv.yml` (mirrors `maxisi_cv.tex` in the private `maxisi/cv` repo). The PDF in `assets/pdf/` is pushed here by that repo's GitHub Actions build on every push to its `master` (deploy key `cv PDF publisher`, secret `SITE_DEPLOY_KEY` in `maxisi/cv`); `python3 bin/update_cv.py` copies it by hand instead |
 | Contact details, social links, site metadata | `_config.yml` |
 
 ### Publications (automatic)

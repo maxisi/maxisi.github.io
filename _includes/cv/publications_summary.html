@@ -1,0 +1,13 @@
+{%- comment -%}
+Pointer from the CV to the publication list, with live counts from
+_data/inspire_stats.yml.
+{%- endcomment -%}
+{%- assign s = site.data.inspire_stats -%}
+<p class="cv-group-text">
+  {{ s.noncollab.publications }} short-author-list papers (refereed articles, preprints and proceedings), listed with
+  links and abstracts on the <a href="{{ '/publications/' | relative_url }}">publications page</a>, where an asterisk
+  marks a student or postdoc mentored by the group. Group-led papers can be filtered by
+  <a href="{{ '/publications/' | relative_url }}?topic=ringdown">ringdowns</a>,
+  <a href="{{ '/publications/' | relative_url }}?topic=populations">populations</a> or
+  <a href="{{ '/publications/' | relative_url }}?topic=methods">methods</a>.
+</p>

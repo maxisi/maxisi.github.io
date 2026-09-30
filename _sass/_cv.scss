@@ -213,3 +213,181 @@ ul.timeline li::before {
      color: var(--global-text-color);
 }
 */
+/*****************************
+ * CV: download button, dated lists, grouped cards, metrics
+ *****************************/
+
+.cv-download {
+  margin: 0.5rem 0 1rem;
+
+  .btn {
+    margin-right: 0.4rem;
+  }
+
+  .cv-download-note {
+    font-size: 0.8rem;
+    color: var(--global-text-color-muted);
+    margin-left: 0.25rem;
+  }
+}
+
+.cv .card {
+  .cv-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .cv-group {
+    margin-top: 1rem;
+
+    &:first-child {
+      margin-top: 0.25rem;
+    }
+  }
+
+  .cv-group-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--global-text-color-muted);
+    margin: 1rem 0 0.5rem;
+  }
+
+  .cv-group-text {
+    font-size: 0.9rem;
+    color: var(--global-text-color-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .cv-plain-list {
+    padding-left: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+
+    li {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  ul.list-group .list-group-item {
+    font-size: 0.95rem;
+  }
+}
+
+.cv-dated-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    gap: 1rem;
+    padding: 0.45rem 0;
+    border-top: 1px solid var(--global-divider-color);
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .cv-dated-year {
+    flex: 0 0 5.5rem;
+    font-family: $font-family-monospace;
+    font-size: 0.78rem;
+    color: var(--global-text-color-muted);
+    padding-top: 0.2rem;
+    white-space: nowrap;
+  }
+
+  .cv-dated-body {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .cv-dated-title a {
+    color: var(--global-text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--global-divider-color);
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration-color: currentColor;
+    }
+  }
+
+  .cv-dated-meta,
+  .cv-dated-note {
+    font-size: 0.82rem;
+    color: var(--global-text-color-muted);
+  }
+
+  .cv-dated-note {
+    font-style: italic;
+    margin-top: 0.1rem;
+  }
+
+  @media (max-width: 575.98px) {
+    li {
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+  }
+}
+
+.cv-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.1em 0.5em;
+  margin-left: 0.35rem;
+  border-radius: 999px;
+  background: var(--global-chip-bg);
+  color: var(--global-text-color-muted);
+  vertical-align: middle;
+}
+
+.cv-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  margin: 0.25rem 0 0.75rem;
+
+  .cv-metric {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cv-metric-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--global-text-color-muted);
+  }
+
+  .cv-metric-value {
+    font-family: $font-family-serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 1.1;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .cv-metric-sep {
+    color: var(--global-text-color-muted);
+    font-weight: 400;
+  }
+}
+
+.cv-metrics-note {
+  font-size: 0.8rem;
+  color: var(--global-text-color-muted);
+  margin-bottom: 0;
+}

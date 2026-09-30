@@ -1,0 +1,21 @@
+{%- comment -%}
+A card made of several sub-sections.  `entry.contents` is a list of groups,
+each with `title`, optional intro `text`, a `type` and its own `contents`
+(or `include` for type include).  The group's contents are passed to the
+cv/*.html includes explicitly, since `entry` is the layout's loop variable.
+{%- endcomment -%}
+{% for group in entry.contents %}
+<div class="cv-group">
+  <p class="cv-group-title">{{ group.title }}</p>
+  {%- if group.text %}<p class="cv-group-text">{{ group.text }}</p>{% endif -%}
+  {%- case group.type -%}
+    {%- when "dated_list" %}{% include cv/dated_list.html contents=group.contents %}
+    {%- when "time_table" %}{% include cv/time_table.html contents=group.contents %}
+    {%- when "list" %}{% include cv/list.html contents=group.contents %}
+    {%- when "nested_list" %}{% include cv/nested_list.html contents=group.contents %}
+    {%- when "text" %}{{ group.contents | markdownify }}
+    {%- when "include" %}{% include {{ group.include }} %}
+    {%- else %}{{ group.contents }}
+  {%- endcase -%}
+</div>
+{% endfor %}
