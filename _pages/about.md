@@ -4,7 +4,7 @@ title: home
 permalink: /
 wide: true
 subtitle: <i>Assistant Professor</i>, <a href='https://www.astro.columbia.edu'>Department of Astronomy</a>, Columbia University<br/><i>Associate Research Scientist</i>, <a href='https://www.flatironinstitute.org/center-for-computational-astrophysics'>Center for Computational Astrophysics</a>, Flatiron Institute
-tagline: We use gravitational waves to study black holes, from the final ring of a merger remnant to the properties of the whole population, and we build the statistical and machine-learning tools that make those measurements possible.
+tagline: Using gravitational waves to learn what black holes are, where they come from, and what they reveal about the universe.
 
 profile:
   image: prof_pic.jpg
@@ -17,18 +17,18 @@ social: true          # contact icons and note
 ---
 
 I am a gravitational-wave astrophysicist. My group creates new ways to exploit
-[LIGO](https://ligo.caltech.edu), [Virgo](https://www.virgo-gw.eu) and
-[KAGRA](https://gwcenter.icrr.u-tokyo.ac.jp/en/) measurements to answer questions about
+<a href="https://ligo.caltech.edu" target="_blank" rel="noopener">LIGO</a>, <a href="https://www.virgo-gw.eu" target="_blank" rel="noopener">Virgo</a> and
+<a href="https://gwcenter.icrr.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">KAGRA</a> measurements to answer questions about
 _gravity_, _black holes_ and _neutron stars_, while paving the way for future
-instruments like [LISA](https://www.lisamission.org). Our work spans
+instruments like <a href="https://www.lisamission.org" target="_blank" rel="noopener">LISA</a>. We ask questions like:
+
+- How heavy are black holes, how fast do they spin, and what does that say about how they formed?
+- What does spacetime look like in the strong-field regime of a merger?
+- Can we use gravitational waves to measure the expansion of the universe?
+
+I head the LIGO group at Columbia University, and co-run the gravitational-waves group at the Flatiron Institute.
+Our work spans
 [black-hole ringdowns](/research/#ringdown) and tests of general relativity, the
 [astrophysical population](/research/#populations) of merging black holes, and
 [machine-learning and statistical methods](/research/#methods) for gravitational-wave
 data analysis.
-
-Before joining [Columbia University](https://www.astro.columbia.edu/content/maximiliano-isi)
-and the [Flatiron Institute](https://www.simonsfoundation.org/people/max-isi/), I was a
-Flatiron Research Fellow at the Center for Computational Astrophysics and a
-_NASA Einstein Fellow_ at [MIT](https://web.mit.edu). I obtained my PhD in Physics from
-[Caltech](https://caltech.edu) in 2019, where I was part of the LIGO Laboratory, and I
-have been a member of the LIGO Scientific Collaboration since 2012.
