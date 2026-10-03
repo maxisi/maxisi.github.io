@@ -30,6 +30,7 @@ members:
     title: Assistant Professor, Columbia University · Associate Research Scientist, Flatiron Institute
     photo: /assets/img/prof_pic.jpg
     links:
+      website: /about/
       email: msi2114@columbia.edu
       github: maxisi
       orcid: 0000-0001-8830-8672

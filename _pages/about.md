@@ -15,20 +15,3 @@ latest_posts: true    # newest notes from _posts/
 selected_papers: true # publications marked selected={true} in the bibliography
 social: true          # contact icons and note
 ---
-
-I am a gravitational-wave astrophysicist. My group creates new ways to exploit
-<a href="https://ligo.caltech.edu" target="_blank" rel="noopener">LIGO</a>, <a href="https://www.virgo-gw.eu" target="_blank" rel="noopener">Virgo</a> and
-<a href="https://gwcenter.icrr.u-tokyo.ac.jp/en/" target="_blank" rel="noopener">KAGRA</a> measurements to answer questions about
-_gravity_, _black holes_ and _neutron stars_, while paving the way for future
-instruments like <a href="https://www.lisamission.org" target="_blank" rel="noopener">LISA</a>. We ask questions like:
-
-- How heavy are black holes, how fast do they spin, and what does that say about how they formed?
-- What does spacetime look like in the strong-field regime of a merger?
-- Can we use gravitational waves to measure the expansion of the universe?
-
-I head the LIGO group at Columbia University, and co-run the gravitational-waves group at the Flatiron Institute.
-Our work spans
-[black-hole ringdowns](/research/#ringdown) and tests of general relativity, the
-[astrophysical population](/research/#populations) of merging black holes, and
-[machine-learning and statistical methods](/research/#methods) for gravitational-wave
-data analysis.

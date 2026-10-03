@@ -20,6 +20,7 @@ layout: default
             <a class="btn btn-primary" href="{{ '/research/' | relative_url }}">Research</a>
             <a class="btn btn-outline" href="{{ '/group/' | relative_url }}">Meet the group</a>
             <a class="btn btn-outline" href="{{ '/publications/' | relative_url }}">Publications</a>
+            <a class="btn btn-outline" href="{{ '/about/' | relative_url }}">About me</a>
           </div>
         </div>
         {% if page.profile.image -%}
@@ -33,10 +34,13 @@ layout: default
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About (only when the page has body text) -->
+  {%- assign about_text = content | strip -%}
+  {% if about_text != "" -%}
   <section class="home-section measure" id="about">
     {{ content }}
   </section>
+  {%- endif %}
 
   <!-- Research areas -->
   <section class="home-section" id="research">
