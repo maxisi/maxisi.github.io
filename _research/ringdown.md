@@ -16,12 +16,10 @@ spectrum is fixed by just the mass and spin. Measuring two or more modes in the 
 signal therefore turns each merger into a laboratory for the _no-hair theorem_ and for
 the nature of black holes, an idea known as black-hole spectroscopy.
 
-Our group has been at the forefront of turning this idea into measurements. We showed
-that the ringdown of GW150914 can be analyzed from the very peak of the signal by
-including _overtones_, obtaining the first spectroscopic test of the Kerr hypothesis
-and a direct test of Hawking's black-hole area law. We have since developed a
-self-consistent framework for analyzing ringdowns directly in the time domain, studied
-the systematics that arise from detector noise and data conditioning, and applied
+Our group has been at the forefront of turning this idea into a reality. Starting with GW150914, we have shown that _overtones_ bring black-hole spectroscopy within reach of LIGO and Virgo. 
+This was most strikingly demonstrated with GW250114, a record-loud signal whose ringdown furnished the best tests yet of the Kerr nature of black holes and of Hawking's black-hole area law.
+Our group's work made these results possible by developing a self-consistent framework for analyzing ringdowns directly in the time domain and producing widely-used software to do so.
+We have also quantified the systematics that may arise from detector noise and data conditioning, and applied
 these tools to the most massive events observed by LIGO and Virgo, including GW190521
 and GW231123, where hints of multiple modes and precessional signatures appear.
 
